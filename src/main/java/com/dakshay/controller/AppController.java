@@ -77,11 +77,11 @@ public class AppController {
 
         return response;
     }
-    @PostMapping(path="/all")
+    @GetMapping(path="/all")
     public @ResponseBody Iterable<Agent> getAllUsers(){
         return agentService.listAll();
     }
-    @PostMapping(path="/hi", consumes = "application/json")
+    @GetMapping(path="/hi", consumes = "application/json")
     public @ResponseBody
     String sayHello(@RequestBody String name){
         return "Hello " + name;
